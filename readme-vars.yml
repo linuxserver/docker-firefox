@@ -1,0 +1,48 @@
+---
+
+# project information
+project_name: firefox
+project_url: "https://www.mozilla.org/en-US/firefox/"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png"
+project_blurb: "[Firefox]({{ project_url }}) Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards."
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_blurb_optional_extras_enabled: false
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# development version
+development_versions: false
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores local files and settings" }
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "3000", internal_port: "3000", port_desc: "Firefox desktop gui." }
+custom_params:
+  - { name: "shm-size", name_compose: "shm_size", value: "1gb",desc: "This is needed for any modern website to function like youtube." }
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  The application can be accessed at:
+  
+  * http://yourhost:3000/
+  
+  By default the user/pass is abc/abc, if you change your password or want to login manually to the GUI session for any reason use the following link:
+  
+  * http://yourhost:3000/?login=true
+
+# changelog
+changelogs:
+  - { date: "19.04.21:", desc: "Initial release." }
