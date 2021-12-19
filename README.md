@@ -29,6 +29,7 @@ Find us at:
 
 # [linuxserver/firefox](https://github.com/linuxserver/docker-firefox)
 
+[![Scarf.io pulls](https://scarf.sh/installs-badge/linuxserver-ci/linuxserver%2Ffirefox?color=94398d&label-color=555555&logo-color=ffffff&style=for-the-badge&package-type=docker)](https://scarf.sh/gateway/linuxserver-ci/docker/linuxserver%2Ffirefox)
 [![GitHub Stars](https://img.shields.io/github/stars/linuxserver/docker-firefox.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/linuxserver/docker-firefox)
 [![GitHub Release](https://img.shields.io/github/release/linuxserver/docker-firefox.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/linuxserver/docker-firefox/releases)
 [![GitHub Package Repository](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=linuxserver.io&message=GitHub%20Package&logo=github)](https://github.com/linuxserver/docker-firefox/packages)
