@@ -45,5 +45,6 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.21:", desc: "Rebase to Alpine 3.15, stop using ESR." }
   - { date: "26.09.21:", desc: "Rebase to Alpine 3.14." }
   - { date: "19.04.21:", desc: "Initial release." }

@@ -8,20 +8,20 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 RUN \
- echo "**** install packages ****" && \
- apk add --no-cache --virtual=build-dependencies \
-	curl && \
- if [ -z ${FIREFOX_VERSION+x} ]; then \
-	FIREFOX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.14/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
-	&& awk '/^P:firefox-esr$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
- fi && \
- apk add --no-cache \
-	firefox-esr==${FIREFOX_VERSION} && \
- echo "**** cleanup ****" && \
- apk del --purge \
-	build-dependencies && \
- rm -rf \
-	/tmp/*
+  echo "**** install packages ****" && \
+  apk add --no-cache --virtual=build-dependencies \
+    curl && \
+  if [ -z ${FIREFOX_VERSION+x} ]; then \
+    FIREFOX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.15/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
+    && awk '/^P:firefox$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
+  fi && \
+  apk add --no-cache \
+    firefox==${FIREFOX_VERSION} && \
+  echo "**** cleanup ****" && \
+  apk del --purge \
+    build-dependencies && \
+  rm -rf \
+    /tmp/*
 
 # add local files
 COPY /root /
