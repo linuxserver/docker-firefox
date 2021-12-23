@@ -1,4 +1,4 @@
-FROM lsiobase/rdesktop-web:amr64v8-alpine
+FROM lsiobase/rdesktop-web:arm64v8-alpine
 
 # set version label
 ARG BUILD_DATE
