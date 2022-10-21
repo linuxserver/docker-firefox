@@ -33,7 +33,7 @@ custom_params:
   - { name: "shm-size", name_compose: "shm_size", value: "1gb",desc: "This is needed for any modern website to function like youtube." }
 opt_security_opt_param: true
 opt_security_opt_param_vars:
-  - { run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker." }
+  - { run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker." }
 
 # application setup block
 app_setup_block_enabled: true
