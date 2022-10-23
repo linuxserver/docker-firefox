@@ -123,7 +123,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
 | `-v /config` | Users home directory in the container, stores local files and settings |
 | `--shm-size=` | This is needed for any modern website to function like youtube. |
-| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function as syscalls are unkown to Docker. |
+| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. |
 
 ## Environment variables from files (Docker secrets)
 
