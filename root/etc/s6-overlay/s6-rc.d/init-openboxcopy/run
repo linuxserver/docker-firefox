@@ -6,3 +6,10 @@ if [[ ! -f /config/.config/openbox/menu.xml ]]; then
     cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
     chown -R abc:abc /config/.config
 fi
+
+if [[ -n "$PASSWORD" ]]; then
+    echo "abc:${PASSWORD}" | chpasswd
+    echo "**** Password set from environment variable 'PASSWORD'. ****"
+else
+    echo "**** No 'PASSWORD' var. The default password 'abc' has been set. ****"
+fi
