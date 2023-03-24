@@ -68,6 +68,9 @@ By default the user/pass is abc/abc, if you change your password or want to logi
 
 * http://yourhost:3000/?login=true
 
+If you need to set the on-screen keyboard to a different layout, please use the environment variable `KEYBOARD=<keymap>` A list of keymaps is available below
+* https://github.com/linuxserver/gclient#keyboard-layouts
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
