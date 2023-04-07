@@ -95,9 +95,6 @@ This container is based on [Docker Baseimage KasmVNC](https://github.com/linuxse
 
 This container is capable of delivering a true lossless image at a high framerate to your web browser by changing the Stream Quality preset to "Lossless", more information [here](https://www.kasmweb.com/docs/latest/how_to/lossless.html#technical-background). In order to use this mode from a non localhost endpoint the HTTPS port on 3001 needs to be used. If using a reverse proxy to port 3000 specific headers will need to be set as outlined [here](https://github.com/linuxserver/docker-baseimage-kasmvnc#lossless).
 
-If you need to set the on-screen keyboard to a different layout, please use the environment variable `KEYBOARD=<keymap>` A list of keymaps is available below
-* https://github.com/linuxserver/gclient#keyboard-layouts
-
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
