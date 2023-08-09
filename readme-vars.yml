@@ -22,6 +22,9 @@ param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "LC_ALL", env_value: "en_US.UTF-8", desc: "Specify the language for the firefox interface. [Complete List](https://github.com/linuxserver/docker-mods/tree/universal-internationalization#other-languages)" }
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Users home directory in the container, stores local files and settings" }
