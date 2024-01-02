@@ -75,6 +75,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.01.24:", desc: "Rebase to Alpine 3.19." }
   - { date: "13.05.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "18.03.23:", desc: "Rebase to KasmVNC base image." }
   - { date: "21.10.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3." }

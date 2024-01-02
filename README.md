@@ -330,6 +330,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.01.24:** - Rebase to Alpine 3.19.
 * **13.05.23:** - Rebase to Alpine 3.18.
 * **18.03.23:** - Rebase to KasmVNC base image.
 * **21.10.22:** - Rebase to Alpine 3.16, migrate to s6v3.
