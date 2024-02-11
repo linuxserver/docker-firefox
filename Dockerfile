@@ -11,6 +11,10 @@ LABEL maintainer="thelamer"
 ENV TITLE=Firefox
 
 RUN \
+  echo "**** add icon ****" && \
+  curl -o \
+    /kclient/public/icon.png \
+    https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png && \
   echo "**** install packages ****" && \
   if [ -z ${FIREFOX_VERSION+x} ]; then \
     FIREFOX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
