@@ -22,6 +22,19 @@ RUN \
   fi && \
   apk add --no-cache \
     firefox==${FIREFOX_VERSION} && \
+  echo "**** lang support ****" && \
+  FF_VERSION=$(curl -sI https://download.mozilla.org/?product=firefox-latest | awk -F '(releases/|/win32)' '/Location/ {print $2}') && \
+  REL_URL="https://releases.mozilla.org/pub/firefox/releases/${FF_VERSION}/win64/xpi/" && \
+  LANGS=$(curl -Ls ${REL_URL} | awk -F '(xpi">|</a>)' '/href.*xpi/ {print $2}' | tr '\n' ' ') && \
+  EXT_DIR=/usr/lib/firefox/distribution/extensions/ && \
+  mkdir -p ${EXT_DIR} && \
+  for LANG in ${LANGS}; do \
+    LANGCODE=$(echo ${LANG} | sed 's/\.xpi//g'); \
+    echo "Downloading ${LANG} Language pack"; \
+    curl -o \
+      ${EXT_DIR}langpack-${LANGCODE}@firefox.mozilla.org.xpi -Ls \
+      ${REL_URL}${LANG};\
+  done && \
   echo "**** default firefox settings ****" && \
   FIREFOX_SETTING="/usr/lib/firefox/browser/defaults/preferences/firefox.js" && \
   echo 'pref("datareporting.policy.firstRunURL", "");' > ${FIREFOX_SETTING} && \
