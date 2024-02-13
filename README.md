@@ -129,6 +129,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+      - FIREFOX_CLI=https://www.linuxserver.io/ #optional
     volumes:
       - /path/to/config:/config
     ports:
@@ -147,6 +148,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
+  -e FIREFOX_CLI=https://www.linuxserver.io/ `#optional` \
   -p 3000:3000 \
   -p 3001:3001 \
   -v /path/to/config:/config \
@@ -166,6 +168,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
+| `-e FIREFOX_CLI=https://www.linuxserver.io/` | Specify one or multiple Firefox CLI flags, this string will be passed to the application in full. |
 | `-v /config` | Users home directory in the container, stores local files and settings |
 | `--shm-size=` | This is needed for any modern website to function like youtube. |
 | `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. |
@@ -331,6 +334,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **13.02.24:** - Add ability to pass CLI args to Firefox.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
 * **01.01.24:** - Rebase to Alpine 3.19.
 * **13.05.23:** - Rebase to Alpine 3.18.
