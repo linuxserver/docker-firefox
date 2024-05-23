@@ -96,6 +96,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.05.24:", desc: "Rebase to Alpine 3.20." }
   - { date: "13.02.24:", desc: "Add ability to pass CLI args to Firefox." }
   - { date: "10.02.24:", desc: "Update Readme with new env vars and ingest proper PWA icon." }
   - { date: "01.01.24:", desc: "Rebase to Alpine 3.19." }
