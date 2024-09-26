@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:arm64v8-alpine320
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:arm64v8-ubuntunoble
 
 # set version label
 ARG BUILD_DATE
@@ -10,31 +10,25 @@ LABEL maintainer="thelamer"
 # title
 ENV TITLE=Firefox
 
+# prevent Ubuntu's firefox stub from being installed
+COPY /root/etc/apt/preferences.d/firefox-no-snap /etc/apt/preferences.d/firefox-no-snap
+
 RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png && \
   echo "**** install packages ****" && \
-  if [ -z ${FIREFOX_VERSION+x} ]; then \
-    FIREFOX_VERSION=$(curl -sL "http://dl-cdn.alpinelinux.org/alpine/v3.20/community/x86_64/APKINDEX.tar.gz" | tar -xz -C /tmp \
-    && awk '/^P:firefox$/,/V:/' /tmp/APKINDEX | sed -n 2p | sed 's/^V://'); \
-  fi && \
-  apk add --no-cache \
-    firefox==${FIREFOX_VERSION} && \
-  echo "**** lang support ****" && \
-  FF_VERSION=$(curl -sI https://download.mozilla.org/?product=firefox-latest | awk -F '(releases/|/win32)' '/Location/ {print $2}') && \
-  REL_URL="https://releases.mozilla.org/pub/firefox/releases/${FF_VERSION}/win64/xpi/" && \
-  LANGS=$(curl -Ls ${REL_URL} | awk -F '(xpi">|</a>)' '/href.*xpi/ {print $2}' | tr '\n' ' ') && \
-  EXT_DIR=/usr/lib/firefox/distribution/extensions/ && \
-  mkdir -p ${EXT_DIR} && \
-  for LANG in ${LANGS}; do \
-    LANGCODE=$(echo ${LANG} | sed 's/\.xpi//g'); \
-    echo "Downloading ${LANG} Language pack"; \
-    curl -o \
-      ${EXT_DIR}langpack-${LANGCODE}@firefox.mozilla.org.xpi -Ls \
-      ${REL_URL}${LANG};\
-  done && \
+  apt-key adv \
+    --keyserver hkp://keyserver.ubuntu.com:80 \
+    --recv-keys 738BEB9321D1AAEC13EA9391AEBDF4819BE21867 && \
+  echo \
+    "deb https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu noble main" > \
+    /etc/apt/sources.list.d/firefox.list && \
+  apt-get update && \
+  apt-get install -y --no-install-recommends \
+    firefox \
+    ^firefox-locale && \
   echo "**** default firefox settings ****" && \
   FIREFOX_SETTING="/usr/lib/firefox/browser/defaults/preferences/firefox.js" && \
   echo 'pref("datareporting.policy.firstRunURL", "");' > ${FIREFOX_SETTING} && \
