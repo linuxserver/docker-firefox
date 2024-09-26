@@ -101,11 +101,42 @@ To install cjk fonts on startup as an example pass the environment variables:
 
 ```
 -e DOCKER_MODS=linuxserver/mods:universal-package-install
--e INSTALL_PACKAGES=font-noto-cjk
+-e INSTALL_PACKAGES=fonts-noto-cjk
 -e LC_ALL=zh_CN.UTF-8
 ```
 
 The web interface has the option for "IME Input Mode" in Settings which will allow non english characters to be used from a non en_US keyboard on the client. Once enabled it will perform the same as a local Linux installation set to your locale.
+
+### Nvidia GPU Support
+
+Nvidia support is available by leveraging Zink for OpenGL support. This can be enabled with the following run flags:
+
+| Variable | Description |
+| :----: | --- |
+| --gpus all | This can be filtered down but for most setups this will pass the one Nvidia GPU on the system |
+| --runtime nvidia | Specify the Nvidia runtime which mounts drivers and tools in from the host |
+
+The compose syntax is slightly different for this as you will need to set nvidia as the default runtime:
+
+```
+sudo nvidia-ctk runtime configure --runtime=docker --set-as-default
+sudo service docker restart
+```
+
+And to assign the GPU in compose:
+
+```
+services:
+  firefox:
+    image: linuxserver/firefox:latest
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [compute,video,graphics,utility]
+```
 
 ### Lossless mode
 
@@ -334,6 +365,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.09.24:** - Rebase to Ubuntu Noble.
 * **23.05.24:** - Rebase to Alpine 3.20.
 * **13.02.24:** - Add ability to pass CLI args to Firefox.
 * **10.02.24:** - Update Readme with new env vars and ingest proper PWA icon.
