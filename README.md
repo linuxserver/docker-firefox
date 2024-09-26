@@ -127,7 +127,7 @@ And to assign the GPU in compose:
 
 ```
 services:
-  webtop:
+  firefox:
     image: linuxserver/firefox:latest
     deploy:
       resources:

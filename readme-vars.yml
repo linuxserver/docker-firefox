@@ -110,7 +110,7 @@ app_setup_block: |
 
   ```
   services:
-    webtop:
+    firefox:
       image: linuxserver/firefox:latest
       deploy:
         resources:
