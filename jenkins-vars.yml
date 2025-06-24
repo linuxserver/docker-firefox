@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-firefox
 external_type: na
-custom_version_command: "curl -s -L https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu/dists/noble/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: firefox' | awk -F ': ' '/Version/{print $2;exit}' | sed 's|[+~,]||g'"
+custom_version_command: "curl -s -L https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu/dists/noble/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: firefox' | awk -F ': ' '/Version/{print $2;exit}' | sed 's|[+~,]||g'"
 release_type: stable
 release_tag: latest
 ls_branch: master

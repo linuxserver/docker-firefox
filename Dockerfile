@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
+FROM ghcr.io/linuxserver/baseimage-selkies:ubuntunoble
 
 # set version label
 ARG BUILD_DATE
@@ -10,21 +10,18 @@ LABEL maintainer="thelamer"
 # title
 ENV TITLE=Firefox
 
-# prevent Ubuntu's firefox stub from being installed
-COPY /root/etc/apt/preferences.d/firefox-no-snap /etc/apt/preferences.d/firefox-no-snap
-
 RUN \
   echo "**** add icon ****" && \
   curl -o \
-    /kclient/public/icon.png \
+    /usr/share/selkies/www/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png && \
   echo "**** install packages ****" && \
   apt-key adv \
     --keyserver hkp://keyserver.ubuntu.com:80 \
-    --recv-keys 738BEB9321D1AAEC13EA9391AEBDF4819BE21867 && \
+    --recv-keys 5301FA4FD93244FBC6F6149982BB6851C64F6880 && \
   echo \
-    "deb https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu noble main" > \
-    /etc/apt/sources.list.d/firefox.list && \
+    "deb https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu noble main" > \
+    /etc/apt/sources.list.d/xtradeb.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     firefox \
