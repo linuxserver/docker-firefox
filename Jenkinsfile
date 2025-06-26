@@ -30,8 +30,8 @@ pipeline {
     MULTIARCH = 'true'
     CI = 'true'
     CI_WEB = 'true'
-    CI_PORT = '3000'
-    CI_SSL = 'false'
+    CI_PORT = '3001'
+    CI_SSL = 'true'
     CI_DELAY = '120'
     CI_DOCKERENV = 'TZ=US/Pacific'
     CI_AUTH = 'user:password'
@@ -143,7 +143,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -s -L https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu/dists/noble/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: firefox' | awk -F ': ' '/Version/{print $2;exit}' | sed 's|[+~,]||g' ''',
+            script: ''' curl -s -L https://ppa.launchpadcontent.net/xtradeb/apps/ubuntu/dists/noble/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: firefox' | awk -F ': ' '/Version/{print $2;exit}' | sed 's|[+~,]||g' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
