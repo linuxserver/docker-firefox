@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
 
 # set version label
@@ -29,6 +31,7 @@ RUN \
   apt-get install -y --no-install-recommends \
     firefox \
     ^firefox-locale && \
+
   echo "**** default firefox settings ****" && \
   FIREFOX_SETTING="/usr/lib/firefox/browser/defaults/preferences/firefox.js" && \
   echo 'pref("datareporting.policy.firstRunURL", "");' > ${FIREFOX_SETTING} && \
@@ -37,6 +40,7 @@ RUN \
   echo 'pref("datareporting.healthreport.uploadEnabled", false);' >> ${FIREFOX_SETTING} && \
   echo 'pref("trailhead.firstrun.branches", "nofirstrun-empty");' >> ${FIREFOX_SETTING} && \
   echo 'pref("browser.aboutwelcome.enabled", false);' >> ${FIREFOX_SETTING} && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
