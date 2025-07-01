@@ -8,7 +8,8 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE=Firefox
+ENV TITLE=Firefox \
+    NO_GAMEPAD=true
 
 RUN \
   echo "**** add icon ****" && \
