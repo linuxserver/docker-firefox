@@ -1033,7 +1033,7 @@ libzstd-dev                                                                   1.
 libzstd1                                                                      1.5.5+dfsg2-2build1.1                   deb                            
 libzvbi-common                                                                0.2.42-2                                deb                            
 libzvbi0t64                                                                   0.2.42-2                                deb                            
-linux-libc-dev                                                                6.8.0-62.65                             deb                            
+linux-libc-dev                                                                6.8.0-63.66                             deb                            
 locales                                                                       2.39-0ubuntu8.4                         deb                            
 locales-all                                                                   2.39-0ubuntu8.4                         deb                            
 login                                                                         1:4.13+dfsg1-4ubuntu3.2                 deb                            
@@ -1142,7 +1142,7 @@ ssl-cert                                                                      1.
 stdlib                                                                        go1.23.7                                go-module     (+5 duplicates)  
 stdlib                                                                        go1.24.4                                go-module     (+4 duplicates)  
 stterm                                                                        0.9-1                                   deb                            
-sudo                                                                          1.9.15p5-3ubuntu5                       deb                            
+sudo                                                                          1.9.15p5-3ubuntu5.24.04.1               deb                            
 systemd                                                                       255.4-1ubuntu8.8                        deb                            
 systemd-dev                                                                   255.4-1ubuntu8.8                        deb                            
 systemd-sysv                                                                  255.4-1ubuntu8.8                        deb                            
