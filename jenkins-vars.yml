@@ -5,7 +5,7 @@ project_name: docker-firefox
 external_type: na
 custom_version_command: "curl -s -L https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu/dists/noble/main/binary-amd64/Packages.gz | gunzip |grep -A 7 -m 1 'Package: firefox' | awk -F ': ' '/Version/{print $2;exit}' | sed 's|[+~,]||g'"
 release_type: prerelease
-release_tag: latest
+release_tag: kasm
 ls_branch: kasm
 repo_vars:
   - BUILD_VERSION_ARG = 'FIREFOX_VERSION'

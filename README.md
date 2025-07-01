@@ -37,7 +37,7 @@ Find us at:
 [![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/firefox.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/linuxserver/firefox)
 [![Docker Stars](https://img.shields.io/docker/stars/linuxserver/firefox.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/linuxserver/firefox)
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-firefox%2Fjob%2Fkasm%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-firefox/job/kasm/)
-[![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Ffirefox%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/firefox/latest/index.html)
+[![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Ffirefox%2Fkasm%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/firefox/kasm/index.html)
 
 [Firefox](https://www.mozilla.org/en-US/firefox/) Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.
 
@@ -47,7 +47,7 @@ Find us at:
 
 We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://distribution.github.io/distribution/spec/manifest-v2-2/#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
 
-Simply pulling `lscr.io/linuxserver/firefox:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
+Simply pulling `lscr.io/linuxserver/firefox:kasm` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
 The architectures supported by this image are:
 
@@ -166,7 +166,7 @@ And to assign the GPU in compose:
 ```
 services:
   firefox:
-    image: lscr.io/linuxserver/firefox:latest
+    image: lscr.io/linuxserver/firefox:kasm
     deploy:
       resources:
         reservations:
@@ -211,7 +211,7 @@ To help you get started creating a container from this image you can either use 
 ---
 services:
   firefox:
-    image: lscr.io/linuxserver/firefox:latest
+    image: lscr.io/linuxserver/firefox:kasm
     container_name: firefox
     security_opt:
       - seccomp:unconfined #optional
@@ -244,7 +244,7 @@ docker run -d \
   -v /path/to/firefox/config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
-  lscr.io/linuxserver/firefox:latest
+  lscr.io/linuxserver/firefox:kasm
 ```
 
 ## Parameters
@@ -327,7 +327,7 @@ We publish various [Docker Mods](https://github.com/linuxserver/docker-mods) to 
 * Image version number:
 
     ```bash
-    docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/firefox:latest
+    docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/firefox:kasm
     ```
 
 ## Updating Info
@@ -375,7 +375,7 @@ Below are the instructions for updating containers:
 * Update the image:
 
     ```bash
-    docker pull lscr.io/linuxserver/firefox:latest
+    docker pull lscr.io/linuxserver/firefox:kasm
     ```
 
 * Stop the running container:
@@ -412,7 +412,7 @@ cd docker-firefox
 docker build \
   --no-cache \
   --pull \
-  -t lscr.io/linuxserver/firefox:latest .
+  -t lscr.io/linuxserver/firefox:kasm .
 ```
 
 The ARM variants can be built on x86_64 hardware and vice versa using `lscr.io/linuxserver/qemu-static`
