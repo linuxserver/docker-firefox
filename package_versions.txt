@@ -169,6 +169,8 @@ fonts-noto-color-emoji                                                        2.
 fonts-noto-core                                                               20201225-2                              deb                            
 fonts-noto-mono                                                               20201225-2                              deb                            
 fonts-urw-base35                                                              20200910-8                              deb                            
+fuse-overlayfs                                                                1.13-1                                  deb                            
+fuse3                                                                         3.14.0-5build1                          deb                            
 g++                                                                           4:13.2.0-7ubuntu1                       deb                            
 g++-13                                                                        13.3.0-6ubuntu2~24.04                   deb                            
 g++-13-x86-64-linux-gnu                                                       13.3.0-6ubuntu2~24.04                   deb                            
@@ -719,6 +721,7 @@ libfontconfig1                                                                2.
 libfontenc1                                                                   1:1.1.8-1build1                         deb                            
 libfreetype6                                                                  2.13.2+dfsg-1build3                     deb                            
 libfribidi0                                                                   1.0.13-3build1                          deb                            
+libfuse3-3                                                                    3.14.0-5build1                          deb                            
 libgbm1                                                                       24.2.8-1ubuntu1~24.04.1                 deb                            
 libgcc-13-dev                                                                 13.3.0-6ubuntu2~24.04                   deb                            
 libgcc-s1                                                                     14.2.0-4ubuntu2~24.04                   deb                            
@@ -1057,7 +1060,7 @@ perl-modules-5.38                                                             5.
 perl-openssl-defaults                                                         7build3                                 deb                            
 pillow                                                                        11.3.0                                  python                         
 pinentry-curses                                                               1.2.1-3ubuntu5                          deb                            
-pixelflux                                                                     1.2.6                                   python                         
+pixelflux                                                                     1.2.7                                   python                         
 polkitd                                                                       124-2ubuntu1.24.04.2                    deb                            
 poppler-data                                                                  0.4.12-1                                deb                            
 procps                                                                        2:4.0.4-4ubuntu3.2                      deb                            
