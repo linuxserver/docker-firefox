@@ -268,7 +268,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 3000:3000` | Firefox desktop gui. |
+| `-p 3000:3000` | Firefox desktop gui HTTP, must be proxied. |
 | `-p 3001:3001` | Firefox desktop gui HTTPS. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
@@ -441,7 +441,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 ## Versions
 
 * **01.07.25:** - Add Kasm branch.
-* **23.06.25:** - Rebase to Selkies.
+* **23.06.25:** - Rebase to Selkies, HTTPS is now required.
 * **25.09.24:** - Rebase to Ubuntu Noble.
 * **23.05.24:** - Rebase to Alpine 3.20.
 * **13.02.24:** - Add ability to pass CLI args to Firefox.
