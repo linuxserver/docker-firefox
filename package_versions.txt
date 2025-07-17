@@ -1019,7 +1019,7 @@ libyaml-0-2                                                                   0.
 libzstd1                                                                      1.5.5+dfsg2-2build1.1                   deb                            
 libzvbi-common                                                                0.2.42-2                                deb                            
 libzvbi0t64                                                                   0.2.42-2                                deb                            
-linux-libc-dev                                                                6.8.0-63.66                             deb                            
+linux-libc-dev                                                                6.8.0-64.67                             deb                            
 locales                                                                       2.39-0ubuntu8.5                         deb                            
 locales-all                                                                   2.39-0ubuntu8.5                         deb                            
 login                                                                         1:4.13+dfsg1-4ubuntu3.2                 deb                            
