@@ -36,7 +36,6 @@ RUN \
   echo 'pref("trailhead.firstrun.branches", "nofirstrun-empty");' >> ${FIREFOX_SETTING} && \
   echo 'pref("browser.aboutwelcome.enabled", false);' >> ${FIREFOX_SETTING} && \
   echo "**** cleanup ****" && \
-  echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
     /config/.cache \
