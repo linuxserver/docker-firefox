@@ -36,13 +36,18 @@ RUN \
   echo 'pref("trailhead.firstrun.branches", "nofirstrun-empty");' >> ${FIREFOX_SETTING} && \
   echo 'pref("browser.aboutwelcome.enabled", false);' >> ${FIREFOX_SETTING} && \
   echo "**** cleanup ****" && \
+  apt-get autoclean && \
   rm -rf \
+    /config/.cache \
+    /config/.launchpadlib \
+    /var/lib/apt/lists/* \
+    /var/tmp/* \
     /tmp/*
 
 # add local files
 COPY /root /
 
 # ports and volumes
-EXPOSE 3000
+EXPOSE 3001
 
 VOLUME /config
