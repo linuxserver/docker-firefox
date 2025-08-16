@@ -440,6 +440,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **16.08.25:** - Add proper cleanup logic for builds.
 * **01.07.25:** - Add Kasm branch.
 * **23.06.25:** - Rebase to Selkies, HTTPS is now required.
 * **25.09.24:** - Rebase to Ubuntu Noble.
