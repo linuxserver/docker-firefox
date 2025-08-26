@@ -7,7 +7,6 @@ custom_version_command: "curl -s -L https://ppa.launchpadcontent.net/xtradeb/app
 release_type: stable
 release_tag: latest
 ls_branch: master
-build_armhf: false
 repo_vars:
   - BUILD_VERSION_ARG = 'FIREFOX_VERSION'
   - LS_USER = 'linuxserver'

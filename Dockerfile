@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM ghcr.io/linuxserver/baseimage-selkies:ubuntunoble
 
 # set version label
@@ -35,6 +37,8 @@ RUN \
   echo 'pref("datareporting.healthreport.uploadEnabled", false);' >> ${FIREFOX_SETTING} && \
   echo 'pref("trailhead.firstrun.branches", "nofirstrun-empty");' >> ${FIREFOX_SETTING} && \
   echo 'pref("browser.aboutwelcome.enabled", false);' >> ${FIREFOX_SETTING} && \
+  echo 'pref("security.sandbox.warn_unprivileged_namespaces", false);' >> ${FIREFOX_SETTING} && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
