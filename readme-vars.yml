@@ -115,6 +115,7 @@ init_diagram: |
   "firefox:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "26.08.25:", desc: "Suppress sandbox security warning as it's misleading inside a container."}
   - {date: "16.08.25:", desc: "Add proper cleanup logic for builds."}
   - {date: "01.07.25:", desc: "Add Kasm branch."}
   - {date: "23.06.25:", desc: "Rebase to Selkies, HTTPS is now required."}
