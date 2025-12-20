@@ -578,6 +578,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **20.12.25:** - Add Wayland init logic.
 * **26.08.25:** - Suppress sandbox security warning as it's misleading inside a container.
 * **16.08.25:** - Add proper cleanup logic for builds.
 * **01.07.25:** - Add Kasm branch.

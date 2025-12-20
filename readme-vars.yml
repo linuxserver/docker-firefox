@@ -114,6 +114,7 @@ init_diagram: |
   "firefox:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "20.12.25:", desc: "Add Wayland init logic."}
   - {date: "26.08.25:", desc: "Suppress sandbox security warning as it's misleading inside a container."}
   - {date: "16.08.25:", desc: "Add proper cleanup logic for builds."}
   - {date: "01.07.25:", desc: "Add Kasm branch."}
