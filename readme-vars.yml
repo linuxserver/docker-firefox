@@ -112,6 +112,7 @@ init_diagram: |
   "firefox:kasm" <- Base Images
 # changelog
 changelogs:
+  - {date: "04.07.26:", desc: "Deprecate Kasm branch."}
   - {date: "25.09.24:", desc: "Rebase to Ubuntu Noble."}
   - {date: "23.05.24:", desc: "Rebase to Alpine 3.20."}
   - {date: "13.02.24:", desc: "Add ability to pass CLI args to Firefox."}
