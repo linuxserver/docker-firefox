@@ -223,7 +223,7 @@ This container is based on [Docker Baseimage Selkies](https://github.com/linuxse
 | DISABLE_IPV6 | If set to true or any value this will disable IPv6 |
 | LC_ALL | Set the Language for the container to run as IE `fr_FR.UTF-8` `ar_AE.UTF-8` |
 | NO_DECOR | If set the application will run without window borders for use as a PWA. (Decor can be enabled and disabled with Ctrl+Shift+d) |
-| NO_FULL | Do not autmatically fullscreen applications when using openbox. |
+| NO_FULL | Do not automatically fullscreen applications when using openbox. |
 | NO_GAMEPAD | Disable userspace gamepad interposer injection. |
 | DISABLE_ZINK | Do not set the Zink environment variables if a video card is detected (userspace applications will use CPU rendering) |
 | DISABLE_DRI3 | Do not use DRI3 acceleration if a video card is detected (userspace applications will use CPU rendering) |
