@@ -3,7 +3,7 @@ adduser                                                                       3.
 adwaita-icon-theme                                                            50.0-1                                 deb                         
 aiofiles                                                                      25.1.0                                 python                      
 aiohappyeyeballs                                                              2.7.1                                  python                      
-aiohttp                                                                       3.14.1                                 python                      
+aiohttp                                                                       3.14.3                                 python                      
 aioice                                                                        0.10.2                                 python                      
 aiosignal                                                                     1.4.0                                  python                      
 apt                                                                           3.2.0                                  deb                         
@@ -718,7 +718,7 @@ libaom3                                                                       3.
 libapparmor1                                                                  5.0.0~beta1-0ubuntu7                   deb                         
 libappstream5                                                                 1.1.2-1                                deb                         
 libapt-pkg7.0                                                                 3.2.0                                  deb                         
-libarchive13t64                                                               3.8.5-1ubuntu2.1                       deb                         
+libarchive13t64                                                               3.8.5-1ubuntu2.2                       deb                         
 libasan8                                                                      16-20260322-1ubuntu1                   deb                         
 libasound2-data                                                               1.2.15.3-1ubuntu1.1                    deb                         
 libasound2-plugins                                                            1.2.12-2build1                         deb                         
@@ -797,7 +797,7 @@ libfido2-1                                                                    1.
 libflac14                                                                     1.5.0+ds-5                             deb                         
 libfontconfig1                                                                2.17.1-3ubuntu1                        deb                         
 libfontenc1                                                                   1:1.1.8-1build2                        deb                         
-libfreetype6                                                                  2.14.2+dfsg-1                          deb                         
+libfreetype6                                                                  2.14.2+dfsg-1ubuntu0.1                 deb                         
 libfribidi0                                                                   1.0.16-5                               deb                         
 libfuse3-4                                                                    3.18.2-1                               deb                         
 libfyaml0                                                                     0.9.4-1                                deb                         
@@ -809,7 +809,7 @@ libgdbm-compat4t64                                                            1.
 libgdbm6t64                                                                   1.26-1build1                           deb                         
 libgdk-pixbuf-2.0-0                                                           2.44.5+dfsg-4ubuntu1                   deb                         
 libgdk-pixbuf2.0-common                                                       2.44.5+dfsg-4ubuntu1                   deb                         
-libgif7                                                                       5.2.2-1ubuntu3                         deb                         
+libgif7                                                                       5.2.2-1ubuntu3.2                       deb                         
 libgirepository-1.0-1                                                         1.86.0-6build1                         deb                         
 libgirepository-2.0-0                                                         2.88.0-1                               deb                         
 libgl1                                                                        1.7.0-3                                deb                         
@@ -861,7 +861,7 @@ libitm1                                                                       16
 libjack-jackd2-0                                                              1.9.22~dfsg-5build1                    deb                         
 libjansson4                                                                   2.14-2build4                           deb                         
 libjbig0                                                                      2.1-6.1ubuntu3                         deb                         
-libjbig2dec0                                                                  0.20-1build4                           deb                         
+libjbig2dec0                                                                  0.20-1ubuntu0.26.04.1                  deb                         
 libjpeg-turbo8                                                                2.1.5-4ubuntu4                         deb                         
 libjpeg8                                                                      8c-2ubuntu12                           deb                         
 libjq1                                                                        1.8.1-4ubuntu2                         deb                         
@@ -922,18 +922,18 @@ libopus0                                                                      1.
 liborc-0.4-0t64                                                               1:0.4.42-2                             deb                         
 libp11-kit0                                                                   0.26.2-2                               deb                         
 libpackagekit-glib2-18                                                        1.3.4-3ubuntu1.1                       deb                         
-libpam-modules                                                                1.7.0-5ubuntu3                         deb                         
-libpam-modules-bin                                                            1.7.0-5ubuntu3                         deb                         
-libpam-runtime                                                                1.7.0-5ubuntu3                         deb                         
+libpam-modules                                                                1.7.0-5ubuntu3.1                       deb                         
+libpam-modules-bin                                                            1.7.0-5ubuntu3.1                       deb                         
+libpam-runtime                                                                1.7.0-5ubuntu3.1                       deb                         
 libpam-systemd                                                                259.5-0ubuntu3                         deb                         
-libpam0g                                                                      1.7.0-5ubuntu3                         deb                         
+libpam0g                                                                      1.7.0-5ubuntu3.1                       deb                         
 libpango-1.0-0                                                                1.57.0-1                               deb                         
 libpangocairo-1.0-0                                                           1.57.0-1                               deb                         
 libpangoft2-1.0-0                                                             1.57.0-1                               deb                         
 libpangoxft-1.0-0                                                             1.57.0-1                               deb                         
 libpaper2                                                                     2.2.5-0.3maysync1                      deb                         
 libpci3                                                                       1:3.14.0-1build2                       deb                         
-libpciaccess0                                                                 0.18.1-1ubuntu4                        deb                         
+libpciaccess0                                                                 0.18.1-1ubuntu4.1                      deb                         
 libpcre2-8-0                                                                  10.46-1build1                          deb                         
 libperl5.40                                                                   5.40.1-7ubuntu0.1                      deb                         
 libpipeline1                                                                  1.5.8-2                                deb                         
@@ -982,7 +982,7 @@ libsoxr0                                                                      0.
 libspectre1                                                                   0.2.12-2                               deb                         
 libspeex1                                                                     1.2.1-3build1                          deb                         
 libspeexdsp1                                                                  1.2.1-3build1                          deb                         
-libsqlite3-0                                                                  3.46.1-9ubuntu0.1                      deb                         
+libsqlite3-0                                                                  3.46.1-9ubuntu0.2                      deb                         
 libss2                                                                        1.47.2-3ubuntu4                        deb                         
 libssh2-1t64                                                                  1.11.1-1ubuntu0.26.04.3                deb                         
 libssl3t64                                                                    3.5.5-1ubuntu3.2                       deb                         
@@ -1077,7 +1077,7 @@ libxfce4util-common                                                           4.
 libxfce4util7                                                                 4.20.1-1build1                         deb                         
 libxfconf-0-3                                                                 4.20.0-1build1                         deb                         
 libxfixes3                                                                    1:6.0.0-2build2                        deb                         
-libxfont2                                                                     1:2.0.6-2                              deb                         
+libxfont2                                                                     1:2.0.6-2ubuntu0.2                     deb                         
 libxft2                                                                       2.3.6-1build2                          deb                         
 libxi6                                                                        2:1.8.2-2                              deb                         
 libxinerama1                                                                  2:1.1.4-3build2                        deb                         
@@ -1089,7 +1089,7 @@ libxml2-16                                                                    2.
 libxmlb2                                                                      0.3.24-2                               deb                         
 libxmu6                                                                       2:1.1.3-4                              deb                         
 libxmuu1                                                                      2:1.1.3-4                              deb                         
-libxpm4                                                                       1:3.5.17-1build3                       deb                         
+libxpm4                                                                       1:3.5.17-1ubuntu0.26.04.1              deb                         
 libxrandr2                                                                    2:1.5.4-1build1                        deb                         
 libxrender1                                                                   1:0.9.12-1build1                       deb                         
 libxres1                                                                      2:1.2.1-1build2                        deb                         
@@ -1132,12 +1132,12 @@ ncurses-term                                                                  6.
 netbase                                                                       6.5build1                              deb                         
 netcat-openbsd                                                                1.234-1                                deb                         
 nftables                                                                      1.1.6-1                                deb                         
-nginx                                                                         1.28.3-2ubuntu1.6                      deb                         
-nginx-common                                                                  1.28.3-2ubuntu1.6                      deb                         
+nginx                                                                         1.28.3-2ubuntu1.8                      deb                         
+nginx-common                                                                  1.28.3-2ubuntu1.8                      deb                         
 oauthlib                                                                      3.3.1                                  python                      
 ocl-icd-libopencl1                                                            2.3.4-1                                deb                         
 openbox                                                                       3.6.1-12ubuntu3                        deb                         
-openssh-client                                                                1:10.2p1-2ubuntu3.4                    deb                         
+openssh-client                                                                1:10.2p1-2ubuntu3.5                    deb                         
 openssl                                                                       3.5.5-1ubuntu3.2                       deb                         
 openssl-provider-legacy                                                       3.5.5-1ubuntu3.2                       deb                         
 packagekit                                                                    1.3.4-3ubuntu1.1                       deb                         
@@ -1158,7 +1158,7 @@ platformdirs                                                                  4.
 polkitd                                                                       127-2ubuntu1                           deb                         
 poppler-data                                                                  0.4.12-1build1                         deb                         
 procps                                                                        2:4.0.4-9ubuntu1                       deb                         
-prometheus-client                                                             0.25.0                                 python                      
+prometheus-client                                                             0.26.0                                 python                      
 propcache                                                                     0.5.2                                  python                      
 psmisc                                                                        23.7-2ubuntu2                          deb                         
 psutil                                                                        7.2.2                                  python                      
@@ -1242,7 +1242,7 @@ systemd-sysv                                                                  25
 sysvinit-utils                                                                3.15-5ubuntu1                          deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                 go-module  (+3 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                 go-module  (+2 duplicates)  
-tar                                                                           1.35+dfsg-4ubuntu0.3                   deb                         
+tar                                                                           1.35+dfsg-4ubuntu0.4                   deb                         
 tomli                                                                         2.0.1                                  python                      
 typeguard                                                                     4.3.0                                  python                      
 typeguard                                                                     4.4.4                                  python                      
@@ -1293,7 +1293,7 @@ xterm                                                                         40
 xutils                                                                        1:7.7+26ubuntu1                        deb                         
 xvfb                                                                          2:21.1.22-1ubuntu1                     deb                         
 xwayland                                                                      2:24.1.10-1                            deb                         
-yarl                                                                          1.24.2                                 python                      
+yarl                                                                          1.24.5                                 python                      
 zipp                                                                          3.19.2                                 python                      
 zipp                                                                          3.23.0                                 python                      
 zlib1g                                                                        1:1.3.dfsg+really1.3.1-1ubuntu3        deb                         
