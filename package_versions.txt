@@ -89,7 +89,7 @@ docker-compose-plugin                                                         5.
 dpkg                                                                          1.23.7ubuntu1                          deb                         
 dunst                                                                         1.12.2-1build1                         deb                         
 e2fsprogs                                                                     1.47.2-3ubuntu4                        deb                         
-fastapi                                                                       0.157.0                                python                      
+fastapi                                                                       0.159.1                                python                      
 file                                                                          1:5.46-5build2                         deb                         
 findutils                                                                     4.10.0-3build2                         deb                         
 firefox                                                                       1:158.0.1+build1-1xtradeb1.2604.1      deb                         
@@ -885,7 +885,7 @@ libnotify-bin                                                                 0.
 libnotify4                                                                    0.8.8-1                                deb                         
 libnpth0t64                                                                   1.8-3build1                            deb                         
 libnspr4                                                                      2:4.38.2-1ubuntu1                      deb                         
-libnss3                                                                       2:3.120-1ubuntu2.1                     deb                         
+libnss3                                                                       2:3.120-1ubuntu2.2                     deb                         
 libnuma1                                                                      2.0.19-1build1                         deb                         
 libnvidia-egl-gbm1                                                            1.1.2.1-1                              deb                         
 libnvidia-egl-wayland1                                                        1:1.1.21-1                             deb                         
@@ -921,8 +921,8 @@ libpixman-1-0                                                                 0.
 libpng16-16t64                                                                1.6.57-1ubuntu0.1                      deb                         
 libpolkit-agent-1-0                                                           127-2ubuntu1.1                         deb                         
 libpolkit-gobject-1-0                                                         127-2ubuntu1.1                         deb                         
-libpoppler-cpp3                                                               26.01.0-2ubuntu0.2                     deb                         
-libpoppler156                                                                 26.01.0-2ubuntu0.2                     deb                         
+libpoppler-cpp3                                                               26.01.0-2ubuntu0.3                     deb                         
+libpoppler156                                                                 26.01.0-2ubuntu0.3                     deb                         
 libppd2                                                                       2:2.1.1-0ubuntu2                       deb                         
 libppd2-common                                                                2:2.1.1-0ubuntu2                       deb                         
 libproc2-0                                                                    2:4.0.4-9ubuntu1                       deb                         
@@ -1144,7 +1144,7 @@ pixelflux                                                                     2.
 platformdirs                                                                  4.2.2                                  python                      
 polkitd                                                                       127-2ubuntu1.1                         deb                         
 poppler-data                                                                  0.4.12-1build1                         deb                         
-poppler-utils                                                                 26.01.0-2ubuntu0.2                     deb                         
+poppler-utils                                                                 26.01.0-2ubuntu0.3                     deb                         
 procps                                                                        2:4.0.4-9ubuntu1                       deb                         
 prometheus-client                                                             0.26.0                                 python                      
 propcache                                                                     0.5.4                                  python                      
